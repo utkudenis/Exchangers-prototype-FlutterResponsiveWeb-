@@ -30,6 +30,8 @@ class _SideMenuState extends State<SideMenu> {
       color: light,
       child: ListView(
         controller: sideController,
+        // to be flush with the main filter
+        padding: EdgeInsets.symmetric(vertical: 40),
         children: [
           if (ResponsiveWidget.isSmallScreen(context))
             Column(

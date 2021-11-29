@@ -8,7 +8,7 @@ class FiltersMobile extends StatefulWidget {
 class _FiltersMobileState extends State<FiltersMobile> {
   String? dropdownValuePrice = '200-250';
   String? dropdownValueCity = 'Helsinki';
-  String? dropdownValuePropertType = 'Room';
+  String? dropdownValuePropertType = 'Shared Room';
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

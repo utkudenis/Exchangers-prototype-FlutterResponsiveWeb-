@@ -91,15 +91,20 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => A
                       ),
                 Container(
                   decoration: BoxDecoration(color: active.withOpacity(.5), borderRadius: BorderRadius.circular(30)),
-                  child: Container(
-                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(30)),
-                    padding: EdgeInsets.all(2),
-                    margin: EdgeInsets.all(2),
-                    child: CircleAvatar(
-                      backgroundColor: light,
-                      child: Icon(
-                        Icons.person_outline,
-                        color: dark,
+                  child: InkWell(
+                    onTap: () {
+                      Get.offAndToNamed(authenticationPageRoute);
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(30)),
+                      padding: EdgeInsets.all(2),
+                      margin: EdgeInsets.all(2),
+                      child: CircleAvatar(
+                        backgroundColor: light,
+                        child: Icon(
+                          Icons.person_outline,
+                          color: dark,
+                        ),
                       ),
                     ),
                   ),
