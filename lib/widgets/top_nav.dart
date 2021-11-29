@@ -42,8 +42,11 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => A
             TextButton(
                 style: TextButton.styleFrom(shadowColor: Colors.red[200], padding: EdgeInsets.zero),
                 onPressed: () => {Get.toNamed(createAdPageRoute)},
-                child:
-                    Container(decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(4)), padding: EdgeInsets.all(8), height: 36, child: Center(child: Text("Create an Ad", style: TextStyle(color: Colors.white))))),
+                child: Container(
+                    decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(4)),
+                    padding: EdgeInsets.all(8),
+                    height: 36,
+                    child: Center(child: Text(ResponsiveWidget.isSmallScreen(context) ? "Create" : "Create an Ad", style: TextStyle(color: Colors.white))))),
             Row(
               children: [
                 Stack(

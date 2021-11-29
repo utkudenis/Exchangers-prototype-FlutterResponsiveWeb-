@@ -21,7 +21,7 @@ class InfoCardSmall extends StatelessWidget {
         onTap: onTap as void Function()?,
         child: Container(
             margin: EdgeInsets.all(10),
-            height: width > 518 ? 430 : 400,
+            height: width > 518 ? 430 : 400 * width / 400 * 0.82,
             padding: EdgeInsets.all(4),
             decoration: BoxDecoration(
               color: Colors.white,
