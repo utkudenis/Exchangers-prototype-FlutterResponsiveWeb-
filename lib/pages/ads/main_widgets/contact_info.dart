@@ -31,10 +31,10 @@ class ContactInfo extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Image.asset(
-                    'assets/images/personPhoto.png',
-                    width: 250,
-                  ),
+                  // Image.asset(
+                  //   'assets/images/personPhoto.png',
+                  //   width: 250,
+                  // ),
                   Container(
                     padding: EdgeInsets.only(left: 20),
                     height: 250,
