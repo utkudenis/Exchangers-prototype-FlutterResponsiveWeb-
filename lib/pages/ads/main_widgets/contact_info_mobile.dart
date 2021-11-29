@@ -26,10 +26,10 @@ class ContactInfoMobile extends StatelessWidget {
           SizedBox(height: 20),
           PriceText(text: "Contact Information"),
           SizedBox(height: 15),
-          Image.asset(
-            'assets/images/personPhoto.png',
-            width: 300,
-          ),
+          // Image.asset(
+          //   'assets/images/personPhoto.png',
+          //   width: 300,
+          // ),
           Container(
             margin: EdgeInsets.only(top: 20),
             padding: EdgeInsets.only(left: 20),
