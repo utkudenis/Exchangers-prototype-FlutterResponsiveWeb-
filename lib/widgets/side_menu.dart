@@ -20,10 +20,14 @@ class SideMenu extends StatefulWidget {
 ScrollController sideController = ScrollController();
 
 class _SideMenuState extends State<SideMenu> {
-  List<bool> _isOpen = [true, true, true, true, false, false, false, false];
-  List<bool> _distanceCampusList = [false, true, false, false];
+  List<bool> _isOpen = [true, true, true, true, true, true, false, false, false, false, false, true];
   List<bool> _distanceCityCenterList = [false, false, false, false, true, false, false, false];
-  List<bool> _buildingAge = [false, false, true, false, false, true, false, false, false, false, false, false];
+  List<bool> _distanceMyarmakiList = [false, true, false, false];
+  List<bool> _distanceKaramalmiList = [true, false, false, false];
+  List<bool> _distanceArabiaList = [false, false, true, false];
+  List<bool> _distanceMyllypuroList = [false, false, false, true];
+  List<bool> _distanceOtaniemiList = [false, true, false, true];
+  // List<bool> _buildingAge = [false, false, true, false, false, true, false, false, false, false, false, false];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -77,8 +81,8 @@ class _SideMenuState extends State<SideMenu> {
                     body: Column(
                       children: [
                         MenuItem(isChecked: false, text: "Unfurnished"),
-                        MenuItem(isChecked: true, text: "Basic"),
-                        MenuItem(isChecked: false, text: "Furnished"),
+                        // MenuItem(isChecked: true, text: "Basic"),
+                        MenuItem(isChecked: true, text: "Furnished"),
                         MenuItem(isChecked: false, text: "Fully Furnished"),
                       ],
                     ),
@@ -126,39 +130,84 @@ class _SideMenuState extends State<SideMenu> {
                 ExpansionPanel(
                     canTapOnHeader: true,
                     headerBuilder: (context, isOpen) {
-                      return ExpansionHeader(header: "Distance to Campus (km)");
+                      return ExpansionHeader(header: "Distance to Citycenter (km)");
                     },
                     body: Column(
                       children: [
-                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceCampusList)
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4"], valueBoolList: _distanceCityCenterList.sublist(0, 4)),
+                        RowNumberBox(boxtexts: ["4-6", "6-8", "8-10", "10+"], valueBoolList: _distanceCityCenterList.sublist(4, 8)),
                       ],
                     ),
                     isExpanded: _isOpen[3]),
                 ExpansionPanel(
                     canTapOnHeader: true,
                     headerBuilder: (context, isOpen) {
-                      return ExpansionHeader(header: "Distance to Citycenter (km)");
+                      return ExpansionHeader(header: "Distance to Myyrmäki (km)");
                     },
                     body: Column(
                       children: [
-                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4"], valueBoolList: _distanceCampusList.sublist(0, 4)),
-                        RowNumberBox(boxtexts: ["4-6", "6-8", "8-10", "10+"], valueBoolList: _distanceCityCenterList.sublist(4, 8)),
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceMyarmakiList)
                       ],
                     ),
                     isExpanded: _isOpen[4]),
                 ExpansionPanel(
                     canTapOnHeader: true,
                     headerBuilder: (context, isOpen) {
-                      return ExpansionHeader(header: "Building Age");
+                      return ExpansionHeader(header: "Distance to Karamalmi (km)");
                     },
                     body: Column(
                       children: [
-                        RowNumberBox(boxtexts: ["0", "1", "2", "3"], valueBoolList: _buildingAge.sublist(0, 4)),
-                        RowNumberBox(boxtexts: ["4", "5-10", "11-15", "16-20"], valueBoolList: _buildingAge.sublist(4, 8)),
-                        RowNumberBox(boxtexts: ["21-25", "26-30", "31-35", "35+"], valueBoolList: _buildingAge.sublist(8, 12)),
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceKaramalmiList)
                       ],
                     ),
                     isExpanded: _isOpen[5]),
+                ExpansionPanel(
+                    canTapOnHeader: true,
+                    headerBuilder: (context, isOpen) {
+                      return ExpansionHeader(header: "Distance to Arabia (km)");
+                    },
+                    body: Column(
+                      children: [
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceArabiaList)
+                      ],
+                    ),
+                    isExpanded: _isOpen[6]),
+                ExpansionPanel(
+                    canTapOnHeader: true,
+                    headerBuilder: (context, isOpen) {
+                      return ExpansionHeader(header: "Distance to Myllypuro (km)");
+                    },
+                    body: Column(
+                      children: [
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceMyllypuroList)
+                      ],
+                    ),
+                    isExpanded: _isOpen[7]),
+                ExpansionPanel(
+                    canTapOnHeader: true,
+                    headerBuilder: (context, isOpen) {
+                      return ExpansionHeader(header: "Distance to Otaniemi (km)");
+                    },
+                    body: Column(
+                      children: [
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceOtaniemiList)
+                      ],
+                    ),
+                    isExpanded: _isOpen[8]),
+
+                // ExpansionPanel(
+                //     canTapOnHeader: true,
+                //     headerBuilder: (context, isOpen) {
+                //       return ExpansionHeader(header: "Building Age");
+                //     },
+                //     body: Column(
+                //       children: [
+                //         RowNumberBox(boxtexts: ["0", "1", "2", "3"], valueBoolList: _buildingAge.sublist(0, 4)),
+                //         RowNumberBox(boxtexts: ["4", "5-10", "11-15", "16-20"], valueBoolList: _buildingAge.sublist(4, 8)),
+                //         RowNumberBox(boxtexts: ["21-25", "26-30", "31-35", "35+"], valueBoolList: _buildingAge.sublist(8, 12)),
+                //       ],
+                //     ),
+                //     isExpanded: _isOpen[5]),
               ],
             ),
           )

@@ -30,6 +30,25 @@ class LocationStep extends StatelessWidget {
             )
           ],
         ),
+        SizedBox(
+          height: 10,
+        ),
+        Flex(
+          direction: Axis.horizontal,
+          children: [
+            Flexible(
+              child: CreateAdFormTextInput(label: "Dist. to Karamalmi "),
+            ),
+            SizedBox(width: 20),
+            Flexible(
+              child: CreateAdFormTextInput(label: "Dist. to Myyrmäki "),
+            ),
+            SizedBox(width: 20),
+            Flexible(
+              child: CreateAdFormTextInput(label: "Dist. to Arabia "),
+            )
+          ],
+        ),
         Container(
           margin: EdgeInsets.all(10),
           // constraints: BoxConstraints(maxHeight: 300),

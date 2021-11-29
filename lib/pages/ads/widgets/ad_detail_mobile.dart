@@ -42,10 +42,20 @@ class _AdDetailMobileState extends State<AdDetailMobile> {
                 ),
               ),
             ),
-            Image.asset(
-              "assets/images/exampleAd.png",
-              fit: BoxFit.contain,
-            ),
+            Container(
+                margin: EdgeInsets.symmetric(vertical: 10),
+                decoration: BoxDecoration(
+                  border: Border.all(width: 5.0, color: Colors.white),
+                  borderRadius: BorderRadius.all(Radius.circular(15.0) //                 <--- border radius here
+                      ),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    "assets/images/exampleAd.jpg",
+                    fit: BoxFit.contain,
+                  ),
+                )),
             Container(
                 height: 530,
                 margin: EdgeInsets.symmetric(vertical: 10),

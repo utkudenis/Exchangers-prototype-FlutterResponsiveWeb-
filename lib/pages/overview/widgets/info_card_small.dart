@@ -21,7 +21,7 @@ class InfoCardSmall extends StatelessWidget {
         onTap: onTap as void Function()?,
         child: Container(
             margin: EdgeInsets.all(10),
-            height: width > 518 ? 430 : 400 * width / 400 * 0.82,
+            height: width > 518 ? 470 : 400 * width / 400 * 0.72 + 15,
             padding: EdgeInsets.all(4),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -30,9 +30,12 @@ class InfoCardSmall extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Image.asset(
-                  "assets/images/exampleAd.png",
-                  fit: BoxFit.fitWidth,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    "assets/images/exampleAd.jpg",
+                    fit: BoxFit.fitWidth,
+                  ),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

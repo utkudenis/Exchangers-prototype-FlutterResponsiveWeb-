@@ -19,7 +19,7 @@ class InfoCardStandart extends StatelessWidget {
         onTap: onTap as void Function()?,
         child: Container(
             margin: EdgeInsets.all(10),
-            height: 300,
+            height: 280,
             //width: 200,
             padding: EdgeInsets.all(4),
             decoration: BoxDecoration(
@@ -30,9 +30,12 @@ class InfoCardStandart extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(
-                  "assets/images/exampleAd.png",
-                  height: 150,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    "assets/images/exampleAd.jpg",
+                    height: 130,
+                  ),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

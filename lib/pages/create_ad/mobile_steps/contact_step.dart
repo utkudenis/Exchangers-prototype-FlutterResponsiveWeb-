@@ -16,13 +16,21 @@ class ContactStepMobile extends StatelessWidget {
           alignment: Alignment.topLeft,
           child: FormHeadingText(text: "Contact"),
         ),
-        CreateAdFormTextInput(label: "Full Name "),
+        CreateAdFormTextInput(
+          label: "Name ",
+        ),
         SizedBox(height: 20),
         CreateAdFormTextInput(label: "Email "),
         SizedBox(height: 20),
-        CreateAdFormTextInput(label: "Primary Phone Number"),
+        CreateAdFormTextInput(
+          label: "Primary Phone Number",
+          isRedStar: false,
+        ),
         SizedBox(height: 20),
-        CreateAdFormTextInput(label: "Secondary Phone Number "),
+        CreateAdFormTextInput(
+          label: "Secondary Phone Number ",
+          isRedStar: false,
+        ),
         SizedBox(height: 20),
         Flex(
           direction: Axis.horizontal,

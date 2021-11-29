@@ -85,7 +85,7 @@ class _FiltersMobileState extends State<FiltersMobile> {
                     dropdownValuePropertType = newValue;
                   });
                 },
-                items: <String>['Room', 'Shared Room', 'Studio', 'House'].map<DropdownMenuItem<String>>((String value) {
+                items: <String>['Room', 'Shared Room', 'Apartment'].map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(value),

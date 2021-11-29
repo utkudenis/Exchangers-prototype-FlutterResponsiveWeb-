@@ -52,9 +52,20 @@ class _AdDetailResponsiveState extends State<AdDetailResponsive> {
                   children: [
                     Flexible(
                       fit: FlexFit.tight,
-                      child: Image.asset(
-                        "assets/images/exampleAd.png",
-                        fit: BoxFit.contain,
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 5.0, color: Colors.white),
+                          borderRadius: BorderRadius.all(Radius.circular(15.0) //                 <--- border radius here
+                              ),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image.asset(
+                            "assets/images/exampleAd.jpg",
+                            fit: BoxFit.contain,
+                          ),
+                        ),
                       ),
                     ),
                     Container(

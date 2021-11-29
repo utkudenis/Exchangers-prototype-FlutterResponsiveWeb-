@@ -14,17 +14,17 @@ class GeneralStep extends StatelessWidget {
         Container(
           margin: EdgeInsets.only(bottom: 20),
           alignment: Alignment.topLeft,
-          child: FormHeadingText(text: "Category"),
+          child: FormHeadingText(text: "Price - Size"),
         ),
         Flex(
           direction: Axis.horizontal,
           children: [
             Flexible(
-              child: CreateAdFormTextInput(label: "Housing "),
+              child: CreateAdFormTextInput(label: "Price "),
             ),
             SizedBox(width: 30),
             Flexible(
-              child: CreateAdFormTextInput(label: "Sale "),
+              child: CreateAdFormTextInput(label: "Size "),
             )
           ],
         ),
@@ -45,7 +45,7 @@ class GeneralStep extends StatelessWidget {
             ),
             SizedBox(width: 30),
             Flexible(
-              child: CreateAdFormTextInput(label: "Number of Livingroom "),
+              child: CreateAdFormTextInput(label: "Accommodation type "),
             )
           ],
         ),

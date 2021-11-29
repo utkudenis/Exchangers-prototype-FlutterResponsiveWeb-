@@ -20,7 +20,9 @@ class ContactStep extends StatelessWidget {
           direction: Axis.horizontal,
           children: [
             Flexible(
-              child: CreateAdFormTextInput(label: "Full Name "),
+              child: CreateAdFormTextInput(
+                label: "Name ",
+              ),
             ),
             SizedBox(width: 30),
             Flexible(
@@ -33,11 +35,17 @@ class ContactStep extends StatelessWidget {
           direction: Axis.horizontal,
           children: [
             Flexible(
-              child: CreateAdFormTextInput(label: "Primary Phone Number"),
+              child: CreateAdFormTextInput(
+                label: "Primary Phone Number",
+                isRedStar: false,
+              ),
             ),
             SizedBox(width: 30),
             Flexible(
-              child: CreateAdFormTextInput(label: "Secondary Phone Number "),
+              child: CreateAdFormTextInput(
+                label: "Secondary Phone Number ",
+                isRedStar: false,
+              ),
             )
           ],
         ),
