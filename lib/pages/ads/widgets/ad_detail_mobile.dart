@@ -69,7 +69,26 @@ class _AdDetailMobileState extends State<AdDetailMobile> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    PriceText(text: "€550 / Month"),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        PriceText(text: "€550 / Month"),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.event_available_rounded,
+                                  size: 24.0,
+                                ),
+                                SizedBox(width: 6),
+                                DescriptionText(text: "4-8-12 months")
+                              ],
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                     SizedBox(height: 10),
                     AdressText(text: "Helsinki, 04200"),
                     SizedBox(height: 20),

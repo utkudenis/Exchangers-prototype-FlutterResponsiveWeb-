@@ -41,7 +41,7 @@ class GeneralStep extends StatelessWidget {
           direction: Axis.horizontal,
           children: [
             Flexible(
-              child: CreateAdFormTextInput(label: "Number of Room "),
+              child: CreateAdFormTextInput(label: "Availability "),
             ),
             SizedBox(width: 30),
             Flexible(

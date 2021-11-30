@@ -20,13 +20,14 @@ class SideMenu extends StatefulWidget {
 ScrollController sideController = ScrollController();
 
 class _SideMenuState extends State<SideMenu> {
-  List<bool> _isOpen = [true, true, true, true, true, true, false, false, false, false, false, true];
+  List<bool> _isOpen = [true, true, true, true, true, true, false, false, false, true, false, true];
   List<bool> _distanceCityCenterList = [false, false, false, false, true, false, false, false];
   List<bool> _distanceMyarmakiList = [false, true, false, false];
   List<bool> _distanceKaramalmiList = [true, false, false, false];
   List<bool> _distanceArabiaList = [false, false, true, false];
   List<bool> _distanceMyllypuroList = [false, false, false, true];
   List<bool> _distanceOtaniemiList = [false, true, false, true];
+  List<bool> _availabilityList = [false, true, true, false];
   // List<bool> _buildingAge = [false, false, true, false, false, true, false, false, false, false, false, false];
   @override
   Widget build(BuildContext context) {
@@ -195,7 +196,17 @@ class _SideMenuState extends State<SideMenu> {
                       ),
                     ),
                     isExpanded: _isOpen[8]),
-
+                ExpansionPanel(
+                    canTapOnHeader: true,
+                    headerBuilder: (context, isOpen) {
+                      return ExpansionHeader(header: "Availability (month)");
+                    },
+                    body: Column(
+                      children: [
+                        RowNumberBox(boxtexts: ["4<", "4-8", "8-12", "12+"], valueBoolList: _availabilityList),
+                      ],
+                    ),
+                    isExpanded: _isOpen[9]),
                 // ExpansionPanel(
                 //     canTapOnHeader: true,
                 //     headerBuilder: (context, isOpen) {
