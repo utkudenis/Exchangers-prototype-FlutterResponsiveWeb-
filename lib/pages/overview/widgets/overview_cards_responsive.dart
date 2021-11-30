@@ -22,8 +22,8 @@ class _OverviewCardsResponsiveScreenState extends State<OverviewCardsResponsiveS
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   InfoCardStandart(
-                    price: "550£ monthly",
-                    deposit: "500£",
+                    price: "550€ monthly",
+                    deposit: "500€",
                     title: "Room in Kannelmaki",
                     value: "Avaliable for 4-8-12 months rent",
                     avaliablefrom: "15.10.2021",
@@ -34,8 +34,8 @@ class _OverviewCardsResponsiveScreenState extends State<OverviewCardsResponsiveS
                     isActive: true,
                   ),
                   InfoCardStandart(
-                    price: "550£ monthly",
-                    deposit: "500£",
+                    price: "550€ monthly",
+                    deposit: "500€",
                     title: "Room in Kannelmaki",
                     value: "Avaliable for 4-8-12 months rent",
                     avaliablefrom: "15.10.2021",
@@ -45,8 +45,8 @@ class _OverviewCardsResponsiveScreenState extends State<OverviewCardsResponsiveS
                   ),
                   _width > 1040
                       ? InfoCardStandart(
-                          price: "550£ monthly",
-                          deposit: "500£",
+                          price: "550€ monthly",
+                          deposit: "500€",
                           title: "Room in Kannelmaki",
                           value: "Avaliable for 4-8-12 months rent",
                           avaliablefrom: "15.10.2021",
@@ -57,8 +57,8 @@ class _OverviewCardsResponsiveScreenState extends State<OverviewCardsResponsiveS
                       : SizedBox(),
                   _width > 1365
                       ? InfoCardStandart(
-                          price: "550£ monthly",
-                          deposit: "500£",
+                          price: "550€ monthly",
+                          deposit: "500€",
                           title: "Room in Kannelmaki",
                           value: "Avaliable for 4-8-12 months rent",
                           avaliablefrom: "15.10.2021",

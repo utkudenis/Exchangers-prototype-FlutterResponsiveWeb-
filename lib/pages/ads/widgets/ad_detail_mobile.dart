@@ -69,7 +69,7 @@ class _AdDetailMobileState extends State<AdDetailMobile> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    PriceText(text: "£550 / Month"),
+                    PriceText(text: "€550 / Month"),
                     SizedBox(height: 10),
                     AdressText(text: "Helsinki, 04200"),
                     SizedBox(height: 20),
@@ -93,7 +93,7 @@ class _AdDetailMobileState extends State<AdDetailMobile> {
                     LocationItem(icon: Icon(Icons.directions_subway_filled_rounded), text: "Metro Station", distance: "500 m"),
                     LocationItem(icon: Icon(Icons.flight_takeoff_rounded), text: "Airport", distance: "2 km"),
                     LocationItem(icon: Icon(Icons.shopping_cart_rounded), text: "Store", distance: "100 m"),
-                    LocationItem(icon: Icon(Icons.school_rounded), text: "School", distance: "300 m"),
+                    LocationItem(icon: Icon(Icons.location_city_rounded), text: "City Center", distance: "3 km"),
                   ],
                 )),
             InteriorFeaturesMobile(),

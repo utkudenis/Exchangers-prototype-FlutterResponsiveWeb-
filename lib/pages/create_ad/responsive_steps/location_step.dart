@@ -18,16 +18,18 @@ class LocationStep extends StatelessWidget {
           direction: Axis.horizontal,
           children: [
             Flexible(
-              child: CreateAdFormTextInput(label: "Province "),
+              child: CreateAdFormTextInput(label: "Dist. to Citycenter "),
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Flexible(
+              child: CreateAdFormTextInput(label: "Dist. to Myyrmäki "),
             ),
             SizedBox(width: 20),
             Flexible(
-              child: CreateAdFormTextInput(label: "District "),
+              child: CreateAdFormTextInput(label: "Dist. to Karamalmi "),
             ),
-            SizedBox(width: 20),
-            Flexible(
-              child: CreateAdFormTextInput(label: "Neighborhood "),
-            )
           ],
         ),
         SizedBox(
@@ -37,16 +39,16 @@ class LocationStep extends StatelessWidget {
           direction: Axis.horizontal,
           children: [
             Flexible(
-              child: CreateAdFormTextInput(label: "Dist. to Karamalmi "),
-            ),
-            SizedBox(width: 20),
-            Flexible(
-              child: CreateAdFormTextInput(label: "Dist. to Myyrmäki "),
-            ),
-            SizedBox(width: 20),
-            Flexible(
               child: CreateAdFormTextInput(label: "Dist. to Arabia "),
-            )
+            ),
+            SizedBox(width: 20),
+            Flexible(
+              child: CreateAdFormTextInput(label: "Dist. to Mylyypuro "),
+            ),
+            SizedBox(width: 20),
+            Flexible(
+              child: CreateAdFormTextInput(label: "Dist. to Otaniemi "),
+            ),
           ],
         ),
         Container(

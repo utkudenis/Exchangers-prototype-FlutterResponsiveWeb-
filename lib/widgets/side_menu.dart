@@ -107,6 +107,74 @@ class _SideMenuState extends State<SideMenu> {
                       ),
                     ),
                     isExpanded: _isOpen[1]),
+
+                ExpansionPanel(
+                    canTapOnHeader: true,
+                    headerBuilder: (context, isOpen) {
+                      return ExpansionHeader(header: "Distance to Myyrmäki (km)");
+                    },
+                    body: Column(
+                      children: [
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceMyarmakiList)
+                      ],
+                    ),
+                    isExpanded: _isOpen[2]),
+                ExpansionPanel(
+                    canTapOnHeader: true,
+                    headerBuilder: (context, isOpen) {
+                      return ExpansionHeader(header: "Distance to Karamalmi (km)");
+                    },
+                    body: Column(
+                      children: [
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceKaramalmiList)
+                      ],
+                    ),
+                    isExpanded: _isOpen[3]),
+                ExpansionPanel(
+                    canTapOnHeader: true,
+                    headerBuilder: (context, isOpen) {
+                      return ExpansionHeader(header: "Distance to Arabia (km)");
+                    },
+                    body: Column(
+                      children: [
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceArabiaList)
+                      ],
+                    ),
+                    isExpanded: _isOpen[4]),
+                ExpansionPanel(
+                    canTapOnHeader: true,
+                    headerBuilder: (context, isOpen) {
+                      return ExpansionHeader(header: "Distance to Myllypuro (km)");
+                    },
+                    body: Column(
+                      children: [
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceMyllypuroList)
+                      ],
+                    ),
+                    isExpanded: _isOpen[5]),
+                ExpansionPanel(
+                    canTapOnHeader: true,
+                    headerBuilder: (context, isOpen) {
+                      return ExpansionHeader(header: "Distance to Otaniemi (km)");
+                    },
+                    body: Column(
+                      children: [
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceOtaniemiList)
+                      ],
+                    ),
+                    isExpanded: _isOpen[6]),
+                ExpansionPanel(
+                    canTapOnHeader: true,
+                    headerBuilder: (context, isOpen) {
+                      return ExpansionHeader(header: "Distance to Citycenter (km)");
+                    },
+                    body: Column(
+                      children: [
+                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4"], valueBoolList: _distanceCityCenterList.sublist(0, 4)),
+                        RowNumberBox(boxtexts: ["4-6", "6-8", "8-10", "10+"], valueBoolList: _distanceCityCenterList.sublist(4, 8)),
+                      ],
+                    ),
+                    isExpanded: _isOpen[7]),
                 ExpansionPanel(
                     canTapOnHeader: true,
                     headerBuilder: (context, isOpen) {
@@ -125,73 +193,6 @@ class _SideMenuState extends State<SideMenu> {
                           Flexible(flex: 4, child: Container(height: 30, child: CreateAdFormTextInput(label: "Max.", isRedStar: false))),
                         ],
                       ),
-                    ),
-                    isExpanded: _isOpen[2]),
-                ExpansionPanel(
-                    canTapOnHeader: true,
-                    headerBuilder: (context, isOpen) {
-                      return ExpansionHeader(header: "Distance to Citycenter (km)");
-                    },
-                    body: Column(
-                      children: [
-                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4"], valueBoolList: _distanceCityCenterList.sublist(0, 4)),
-                        RowNumberBox(boxtexts: ["4-6", "6-8", "8-10", "10+"], valueBoolList: _distanceCityCenterList.sublist(4, 8)),
-                      ],
-                    ),
-                    isExpanded: _isOpen[3]),
-                ExpansionPanel(
-                    canTapOnHeader: true,
-                    headerBuilder: (context, isOpen) {
-                      return ExpansionHeader(header: "Distance to Myyrmäki (km)");
-                    },
-                    body: Column(
-                      children: [
-                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceMyarmakiList)
-                      ],
-                    ),
-                    isExpanded: _isOpen[4]),
-                ExpansionPanel(
-                    canTapOnHeader: true,
-                    headerBuilder: (context, isOpen) {
-                      return ExpansionHeader(header: "Distance to Karamalmi (km)");
-                    },
-                    body: Column(
-                      children: [
-                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceKaramalmiList)
-                      ],
-                    ),
-                    isExpanded: _isOpen[5]),
-                ExpansionPanel(
-                    canTapOnHeader: true,
-                    headerBuilder: (context, isOpen) {
-                      return ExpansionHeader(header: "Distance to Arabia (km)");
-                    },
-                    body: Column(
-                      children: [
-                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceArabiaList)
-                      ],
-                    ),
-                    isExpanded: _isOpen[6]),
-                ExpansionPanel(
-                    canTapOnHeader: true,
-                    headerBuilder: (context, isOpen) {
-                      return ExpansionHeader(header: "Distance to Myllypuro (km)");
-                    },
-                    body: Column(
-                      children: [
-                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceMyllypuroList)
-                      ],
-                    ),
-                    isExpanded: _isOpen[7]),
-                ExpansionPanel(
-                    canTapOnHeader: true,
-                    headerBuilder: (context, isOpen) {
-                      return ExpansionHeader(header: "Distance to Otaniemi (km)");
-                    },
-                    body: Column(
-                      children: [
-                        RowNumberBox(boxtexts: ["<1", "1-2", "2-4", "4+"], valueBoolList: _distanceOtaniemiList)
-                      ],
                     ),
                     isExpanded: _isOpen[8]),
 

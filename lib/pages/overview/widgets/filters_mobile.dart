@@ -18,6 +18,31 @@ class _FiltersMobileState extends State<FiltersMobile> {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
+            //Property Type
+            Flexible(
+                child: Row(children: [
+              Icon(Icons.hotel_rounded),
+              SizedBox(
+                width: 2,
+              ),
+              DropdownButton<String>(
+                value: dropdownValuePropertType,
+                icon: Icon(Icons.arrow_drop_down),
+                iconSize: 24,
+                elevation: 16,
+                onChanged: (String? newValue) {
+                  setState(() {
+                    dropdownValuePropertType = newValue;
+                  });
+                },
+                items: <String>['Room', 'Shared Room', 'Apartment'].map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+              ),
+            ])),
             // City
             Flexible(
                 child: Row(children: [
@@ -61,31 +86,6 @@ class _FiltersMobileState extends State<FiltersMobile> {
                   });
                 },
                 items: <String>['<200', '200-250', '250-300', '300-350', '350-400', '400-450', '450-500', '500>'].map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
-              ),
-            ])),
-            //Property Type
-            Flexible(
-                child: Row(children: [
-              Icon(Icons.hotel_rounded),
-              SizedBox(
-                width: 2,
-              ),
-              DropdownButton<String>(
-                value: dropdownValuePropertType,
-                icon: Icon(Icons.arrow_drop_down),
-                iconSize: 24,
-                elevation: 16,
-                onChanged: (String? newValue) {
-                  setState(() {
-                    dropdownValuePropertType = newValue;
-                  });
-                },
-                items: <String>['Room', 'Shared Room', 'Apartment'].map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(value),

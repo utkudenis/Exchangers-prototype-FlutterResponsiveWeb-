@@ -66,7 +66,7 @@ class ContactInfo extends StatelessWidget {
               ),
               width! > 950
                   ? Image.asset(
-                      'assets/images/map.png',
+                      'assets/images/createAdMapExample.png',
                       width: 350,
                     )
                   : SizedBox()
@@ -76,7 +76,7 @@ class ContactInfo extends StatelessWidget {
               ? Container(
                   margin: EdgeInsets.all(10),
                   child: Image.asset(
-                    'assets/images/map.png',
+                    'assets/images/createAdMapExample.png',
                     width: 450,
                   ),
                 )

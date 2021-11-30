@@ -21,25 +21,40 @@ class _FiltersGeneralState extends State<FiltersGeneral> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // Search
-          Flexible(
-            child: Container(
-              constraints: BoxConstraints(
-                maxWidth: 200,
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: "Enter keyword",
-                  hintText: "room in Kluuvi",
-                  icon: Icon(
-                    Icons.search_sharp,
-                    color: Colors.black,
-                  ),
-                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                ),
+          //Property Type
+
+          Row(children: [
+            Icon(Icons.hotel_rounded),
+            SizedBox(
+              width: 8,
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              decoration: ShapeDecoration(
+                  shape: RoundedRectangleBorder(
+                side: BorderSide(width: 1.0, style: BorderStyle.solid, color: Colors.grey),
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+              )),
+              child: DropdownButton<String>(
+                underline: SizedBox(),
+                value: dropdownValuePropertType,
+                icon: Icon(Icons.arrow_drop_down),
+                iconSize: 24,
+                elevation: 16,
+                onChanged: (String? newValue) {
+                  setState(() {
+                    dropdownValuePropertType = newValue;
+                  });
+                },
+                items: <String>['Room', 'Shared Room', 'Apartment'].map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
               ),
             ),
-          ),
+          ]),
 
           // City
           Row(children: [
@@ -110,39 +125,25 @@ class _FiltersGeneralState extends State<FiltersGeneral> {
               ),
             ),
           ]),
-          //Property Type
-          Row(children: [
-            Icon(Icons.hotel_rounded),
-            SizedBox(
-              width: 8,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              decoration: ShapeDecoration(
-                  shape: RoundedRectangleBorder(
-                side: BorderSide(width: 1.0, style: BorderStyle.solid, color: Colors.grey),
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
-              )),
-              child: DropdownButton<String>(
-                underline: SizedBox(),
-                value: dropdownValuePropertType,
-                icon: Icon(Icons.arrow_drop_down),
-                iconSize: 24,
-                elevation: 16,
-                onChanged: (String? newValue) {
-                  setState(() {
-                    dropdownValuePropertType = newValue;
-                  });
-                },
-                items: <String>['Room', 'Shared Room', 'Studio', 'House'].map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
+          // Search
+          Flexible(
+            child: Container(
+              constraints: BoxConstraints(
+                maxWidth: 200,
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: "Enter keyword",
+                  hintText: "room in Kluuvi",
+                  icon: Icon(
+                    Icons.search_sharp,
+                    color: Colors.black,
+                  ),
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                ),
               ),
             ),
-          ]),
+          ),
         ],
       ),
     );

@@ -63,7 +63,7 @@ class ContactInfoMobile extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
               child: Image.asset(
-                'assets/images/map.png',
+                'assets/images/createAdMapExample.png',
                 width: 450,
               ),
             ),

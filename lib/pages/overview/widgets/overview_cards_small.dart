@@ -12,8 +12,8 @@ class OverviewCardsSmallScreen extends StatelessWidget {
             itemCount: 50,
             itemBuilder: (BuildContext context, int index) {
               return InfoCardSmall(
-                price: "550£ monthly",
-                deposit: "500£",
+                price: "550€ monthly",
+                deposit: "500€",
                 title: "Room in Kannelmaki",
                 value: "Avaliable for 4-8-12 months rent",
                 avaliablefrom: "15.10.2021",
