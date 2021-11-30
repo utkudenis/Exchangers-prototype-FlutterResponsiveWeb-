@@ -83,7 +83,7 @@ class _FiltersGeneralState extends State<FiltersGeneral> {
                     dropdownValueCity = newValue;
                   });
                 },
-                items: <String>['Helsinki', 'Turku', 'Tampere', 'Oulu'].map<DropdownMenuItem<String>>((String value) {
+                items: <String>['Helsinki', 'Vantaa', 'Espoo', 'Turku', 'Tampere', 'Oulu'].map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(value),

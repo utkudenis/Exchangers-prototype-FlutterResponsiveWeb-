@@ -21,7 +21,7 @@ class VerticalHomeProporties extends StatelessWidget {
                   size: 32.0,
                 ),
                 SizedBox(width: 6),
-                DescriptionText(text: "2")
+                DescriptionText(text: "1")
               ],
             )
           ],
@@ -36,14 +36,14 @@ class VerticalHomeProporties extends StatelessWidget {
                   size: 32.0,
                 ),
                 SizedBox(width: 6),
-                DescriptionText(text: "2")
+                DescriptionText(text: "1")
               ],
             )
           ],
         ),
         Column(
           children: [
-            DescriptionText(text: "Total Area"),
+            DescriptionText(text: "Room Size"),
             Row(
               children: [
                 Icon(
@@ -51,7 +51,7 @@ class VerticalHomeProporties extends StatelessWidget {
                   size: 32.0,
                 ),
                 SizedBox(width: 4),
-                DescriptionText(text: "120 m²")
+                DescriptionText(text: "15 m²")
               ],
             )
           ],
