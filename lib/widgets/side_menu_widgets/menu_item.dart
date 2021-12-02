@@ -12,11 +12,11 @@ class MenuItem extends StatelessWidget {
       children: [
         Checkbox(
           value: isChecked,
-          hoverColor: Colors.redAccent[100],
+          hoverColor: Colors.orangeAccent[100],
           splashRadius: 14.0,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2), side: BorderSide(width: 0.5, color: Colors.grey, style: BorderStyle.none)),
           onChanged: (bool? value) {},
-          activeColor: Colors.redAccent,
+          activeColor: Colors.orangeAccent,
         ),
         Expanded(
           child: Text(

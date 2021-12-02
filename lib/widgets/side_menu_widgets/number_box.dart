@@ -21,10 +21,10 @@ class _NumberBoxState extends State<NumberBox> {
         width: 45,
         height: 20,
         decoration: BoxDecoration(
-            color: widget.colourCool ? Colors.redAccent : Colors.white,
+            color: widget.colourCool ? Colors.orangeAccent : Colors.white,
             borderRadius: BorderRadius.circular(4.0),
             border: Border.all(
-              color: !widget.colourCool ? Colors.redAccent : Colors.white,
+              color: !widget.colourCool ? Colors.orangeAccent : Colors.white,
             )),
         child: Text(
           widget.text,

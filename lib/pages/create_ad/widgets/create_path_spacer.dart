@@ -13,7 +13,7 @@ class CreatePathSpacer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 20),
-      color: isActive ? Colors.red : Colors.grey,
+      color: isActive ? Colors.orange : Colors.grey,
       height: 2,
       width: width,
     );

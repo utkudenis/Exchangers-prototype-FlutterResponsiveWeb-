@@ -100,21 +100,25 @@ class _CreateAdPageMobileState extends State<CreateAdPageMobile> {
                           onPressed: () => setState(() {
                                 stepCounter(isBack: true);
                               }),
-                          style: TextButton.styleFrom(shadowColor: Colors.red[200], padding: EdgeInsets.zero),
+                          style: TextButton.styleFrom(shadowColor: Colors.orange[200], padding: EdgeInsets.zero),
                           child: Container(
                               margin: EdgeInsets.all(10),
                               width: 150,
                               height: 48,
-                              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(4), border: Border.all(color: Colors.red[400]!, width: 1)),
+                              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(4), border: Border.all(color: Colors.orange[400]!, width: 1)),
                               child: Center(child: Text("Previous", style: TextStyle(color: Colors.black)))))
                       : SizedBox(),
                   TextButton(
-                      style: TextButton.styleFrom(shadowColor: Colors.red[200], padding: EdgeInsets.zero),
+                      style: TextButton.styleFrom(shadowColor: Colors.orange[200], padding: EdgeInsets.zero),
                       onPressed: () => setState(() {
                             stepCounter();
                           }),
                       child: Container(
-                          decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(4)), margin: EdgeInsets.all(10), width: 150, height: 48, child: Center(child: Text("Next", style: TextStyle(color: Colors.white)))))
+                          decoration: BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.circular(4)),
+                          margin: EdgeInsets.all(10),
+                          width: 150,
+                          height: 48,
+                          child: Center(child: Text("Next", style: TextStyle(color: Colors.white)))))
                 ],
               )
             ])),

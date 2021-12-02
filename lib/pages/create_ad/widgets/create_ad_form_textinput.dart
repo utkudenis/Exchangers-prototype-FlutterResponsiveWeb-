@@ -19,7 +19,7 @@ class CreateAdFormTextInput extends StatelessWidget {
       maxLines: lineNumber,
       decoration: InputDecoration(
         label: Container(
-          child: RichText(text: TextSpan(children: [TextSpan(text: label), isRedStar ? TextSpan(text: " \*", style: TextStyle(color: Colors.red)) : TextSpan()])),
+          child: RichText(text: TextSpan(children: [TextSpan(text: label), isRedStar ? TextSpan(text: " \*", style: TextStyle(color: Colors.orange)) : TextSpan()])),
         ),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20), gapPadding: 0),
         floatingLabelBehavior: FloatingLabelBehavior.always,

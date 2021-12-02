@@ -19,7 +19,7 @@ class CreatePathItem extends StatelessWidget {
       children: [
         Container(
           padding: EdgeInsets.all(10),
-          decoration: BoxDecoration(color: isActive ? Colors.red : Colors.grey, shape: BoxShape.circle),
+          decoration: BoxDecoration(color: isActive ? Colors.orange : Colors.grey, shape: BoxShape.circle),
           child: Icon(
             iconName,
             color: Colors.white,

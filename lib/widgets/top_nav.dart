@@ -40,10 +40,10 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => A
               child: SizedBox(),
             ),
             TextButton(
-                style: TextButton.styleFrom(shadowColor: Colors.red[200], padding: EdgeInsets.zero),
+                style: TextButton.styleFrom(shadowColor: Colors.orange[200], padding: EdgeInsets.zero),
                 onPressed: () => {Get.toNamed(createAdPageRoute)},
                 child: Container(
-                    decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(4)),
+                    decoration: BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.circular(4)),
                     padding: EdgeInsets.all(8),
                     height: 36,
                     child: Center(child: Text(ResponsiveWidget.isSmallScreen(context) ? "Create" : "Create an Ad", style: TextStyle(color: Colors.white))))),
@@ -77,6 +77,14 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => A
                             height: 22,
                             color: lightGrey,
                           ),
+                          IconButton(
+                              onPressed: () {
+                                Get.offAndToNamed(tipsPageRoute);
+                              },
+                              icon: Icon(
+                                Icons.help_outline_rounded,
+                                color: dark.withOpacity(.7),
+                              )),
                           Container(
                             margin: EdgeInsets.only(left: 24, right: 16),
                             child: CustomText(

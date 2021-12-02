@@ -22,12 +22,12 @@ class PhotosStep extends StatelessWidget {
         DepositText(text: "You can add 30 photos to your ad"),
         SizedBox(height: 20),
         TextButton(
-          style: TextButton.styleFrom(shadowColor: Colors.red[200], padding: EdgeInsets.zero),
+          style: TextButton.styleFrom(shadowColor: Colors.orange[200], padding: EdgeInsets.zero),
           onPressed: () {
             print("Upload images clicked");
           },
           child: Container(
-            decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(4)),
+            decoration: BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.circular(4)),
             margin: EdgeInsets.all(10),
             width: 225,
             height: 48,
@@ -49,7 +49,7 @@ class PhotosStep extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.add, color: Colors.red),
+                  Icon(Icons.add, color: Colors.orange),
                   DescriptionText(text: "You can add 30 photos to your add"),
                 ],
               ),
